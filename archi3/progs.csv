@@ -34,4 +34,6 @@
 ,conky,"is a desktop heads up display."
 ,fortune-mod,"prints a random fortune."
 ,fzf,"is a fuzzy finder OwO."
+,nodejs,"is for coc."
+,yarn,"is for coc."
 A,compton-tryone-git,"is the compton composite manager with more features."

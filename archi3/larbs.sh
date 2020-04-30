@@ -209,6 +209,10 @@ rm -f "/home/$name/README.md" "/home/$name/LICENSE"
 # Enable services here.
 serviceinit NetworkManager lightdm.service
 
+# Install vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Most important command! Get rid of the beep!
 systembeepoff
 
