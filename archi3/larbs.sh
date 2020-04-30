@@ -213,7 +213,7 @@ putgitrepo "https://github.com/LukeSmithxyz/mozillarbs.git" "/home/$name/.mozill
 [ -f /usr/bin/pulseaudio ] && resetpulse
 
 # Enable services here.
-serviceinit NetworkManager cronie
+serviceinit NetworkManager cronie lightdm.service
 
 # Most important command! Get rid of the beep!
 systembeepoff
