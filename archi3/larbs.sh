@@ -207,11 +207,16 @@ rm -f "/home/$name/README.md" "/home/$name/LICENSE"
 [ -f /usr/bin/pulseaudio ] && resetpulse
 
 # Enable services here.
-serviceinit NetworkManager lightdm.service
+serviceinit NetworkManager 
+systemctl enable lightdm.service
 
 # Install vim-plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+curl -fLo /home/$name/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions /home/$name/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting /home/$name/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Most important command! Get rid of the beep!
 systembeepoff
